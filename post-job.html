@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post a job</title>
+
+
+    <!-- css cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--java script cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+      </script>
+
+    <!-- font awesome cdn-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head>
+
+
+
+
+
+<style>
+    .navbar-custom {
+      background-color: #0d51fd; 
+    }
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: #fff;
+      font-weight: 500;
+    }
+    .navbar-custom .nav-link:hover {
+      color: #dbe9ffd6;
+    }
+
+
+
+
+
+    .navbar-custom .nav-link {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.navbar-custom .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+
+
+
+
+
+.page-header {
+  width: 100%;
+  padding: 30px 40px;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.page-header p {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+
+
+
+body {
+  background: #f3f4f6;  
+}
+
+.job-form-card {
+  width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+label span {
+  color: red;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+.post-btn {
+  width: 150px;
+  margin: 20px auto 0;
+  display: block;
+  background: #58a212;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.post-btn:hover {
+  background: #4a7c22;
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+<body>
+    <!--Navbar-->
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Online Job Portal</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="jobs.html">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="post-job.html">Post a Job</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loginform.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- Page Header Section -->
+<div class="page-header">
+  <h1>Post a Job</h1>
+  <p>Fill in the details to create a job listing</p>
+</div>
+
+
+
+
+<div class="job-form-card">
+  <form>
+
+    <div class="form-group">
+      <label>Job Title <span>*</span></label>
+      <input type="text" placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label>Company Name <span>*</span></label>
+      <input type="text" placeholder="">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Location <span>*</span></label>
+        <input type="text" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label>Job Type <span>*</span></label>
+        <select>
+          <option>Full-Time</option>
+          <option>Part-Time</option>
+          <option>Internship</option>
+          <option>Contract</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Experience <span>*</span></label>
+        <input type="text" placeholder="">
+      </div>
+
+      <div class="form-group">
+        <label>Salary (Optional)</label>
+        <input type="text" placeholder="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Job Description <span>*</span></label>
+      <textarea placeholder="Describe the job responsibilities, qualifications, and other details..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Required Skills <span>*</span></label>
+      <input type="text" placeholder="">
+    </div>
+
+    <button class="post-btn">Post Job</button>
+
+  </form>
+</div>
+
+
+
+
+
+
+<script>
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  let currentPage = window.location.pathname.split("/").pop();
+
+  if (currentPage === "") {
+    currentPage = "";
+  }
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs</title>
+  <!-- css cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--java script cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+      </script>
+
+</head>
+<style>
+
+    body {
+      background-color: #f4f6f9;
+    }
+
+    .navbar-custom {
+      background-color: #0d51fd;
+    }
+
+    .navbar-custom .nav-link,
+    .navbar-custom .navbar-brand {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .navbar-custom .nav-link.active::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: #fff;
+      margin-top: 4px;
+    }
+
+
+    .btn {
+        background-color: rgb(10, 185, 10);
+        color: #fff;
+    }
+
+    .job-card {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .badge-custom {
+      background-color: #e8f0ff;
+      color: #0d51fd;
+    }
+  </style>
+<body>
+  <!--Navbar-->
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Online Job Portal</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="jobs.html">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="post-job.html">Post a Job</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loginform.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Job Search Section -->
+<div class="container my-5">
+  <div class="card p-4 shadow-sm">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="Job title or keyword">
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Location">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select">
+          <option selected>Job Type</option>
+          <option>Full-Time</option>
+          <option>Part-Time</option>
+          <option>Internship</option>
+        </select>
+      </div>
+      <div class="col-md-2 d-grid">
+        <button class="btn">Search Jobs</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Job Listings -->
+<div class="container">
+  <h4 class="mb-4">Latest Job Openings</h4>
+
+  <!-- Job Card -->
+  <div class="card job-card mb-4 p-4">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h5>Software Developer</h5>
+        <p class="mb-1 text-muted">ABC Technologies</p>
+        <span class="badge badge-custom me-2">Full-Time</span>
+        <span class="badge badge-custom">Remote</span>
+      </div>
+      <div class="text-end">
+        <p class="text-muted mb-1">₹6 - ₹8 LPA</p>
+        <a href="apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Card -->
+  <div class="card job-card mb-4 p-4">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h5>Marketing Specialist</h5>
+        <p class="mb-1 text-muted">Infosys</p>
+        <span class="badge badge-custom me-2">Full-Time</span>
+        <span class="badge badge-custom">Pune</span>
+      </div>
+      <div class="text-end">
+        <p class="text-muted mb-1">₹6 - ₹8 LPA</p>
+        <a href="apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Card -->
+  <div class="card job-card mb-4 p-4">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h5>HR Manager</h5>
+        <p class="mb-1 text-muted">Sonata Software Ltd</p>
+        <span class="badge badge-custom me-2">Full-Time</span>
+        <span class="badge badge-custom">Hyderabad</span>
+      </div>
+      <div class="text-end">
+        <p class="text-muted mb-1">₹6 - ₹8 LPA</p>
+        <a href="apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Card -->
+  <div class="card job-card mb-4 p-4">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h5>UI/UX Designer</h5>
+        <p class="mb-1 text-muted">Creative Studio</p>
+        <span class="badge badge-custom me-2">Part-Time</span>
+        <span class="badge badge-custom">Mumbai</span>
+      </div>
+      <div class="text-end">
+        <p class="text-muted mb-1">₹4 - ₹5 LPA</p>
+        <a href="apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Job Card -->
+  <div class="card job-card mb-4 p-4">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h5>Data Analyst</h5>
+        <p class="mb-1 text-muted">FinTech Corp</p>
+        <span class="badge badge-custom me-2">Internship</span>
+        <span class="badge badge-custom">Bangalore</span>
+      </div>
+      <div class="text-end">
+        <p class="text-muted mb-1">₹25k / month</p>
+        <a href="apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  let currentPage = window.location.pathname.split("/").pop();
+
+  if (currentPage === "") {
+    currentPage = "";
+  }
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
+
+</script>
+
+
+</body>
+</html>
